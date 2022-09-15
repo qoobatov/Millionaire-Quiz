@@ -115,7 +115,7 @@ function App() {
                 <Timer
                   setStop={setStop}
                   questionNumber={questionNumber}
-                  setQuestionNumber={setQuestionNumber}
+                  // setQuestionNumber={setQuestionNumber}
                 />
               </div>
             </div>
