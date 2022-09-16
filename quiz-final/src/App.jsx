@@ -2,82 +2,14 @@ import "./app.css";
 import { useEffect, useState, useMemo } from "react";
 import Trivia from "./components/Trivia";
 import Timer from "./components/Timer";
+import { useSelector } from 'react-redux'
 function App() {
   const [questionNumber, setQuestionNumber] = useState(1);
   const [stop, setStop] = useState(false);
   const [earned, setEarned] = useState("$ 0");
+  const questions = useSelector(store => store.questions)
 
-  const data = [
-    {
-      id: 1,
-      question:
-        "Какому условию должна удовлетворять длина волны света λ, падающего на поверхность металла, чтобы началось явление фотоэффекта?",
-      answers: [
-        {
-          text: "λ ≥ A/h",
-          correct: false,
-        },
-        {
-          text: "λ ≤ hc/A",
-          correct: true,
-        },
-        {
-          text: "λ > Ek/h",
-          correct: false,
-        },
-        {
-          text: "λ > hc/A",
-          correct: false,
-        },
-      ],
-    },
-    {
-      id: 2,
-      question:
-        "Лазер полезной мощностью 30 Вт испускает каждую секунду 1020 фотонов. Определите длину волны излучения лазера (мкм). h = 6,6•10-34Дж•с?",
-      answers: [
-        {
-          text: "0,66",
-          correct: true,
-        },
-        {
-          text: "0,99",
-          correct: false,
-        },
-        {
-          text: "1,98",
-          correct: false,
-        },
-        {
-          text: "0.78",
-          correct: false,
-        },
-      ],
-    },
-    {
-      id: 3,
-      question:
-        "Сколько фотонов каждую секунду испускает источник монохроматического света с длиной волны 660 нм и мощностью 20 Вт? h = 6,6•10-34Дж•с",
-      answers: [
-        {
-          text: "10**20",
-          correct: false,
-        },
-        {
-          text: "5•10**20",
-          correct: false,
-        },
-        {
-          text: "6,7•10**19",
-          correct: true,
-        },
-        {
-          text: "6,7•10**21",
-          correct: false,
-        },
-      ],
-    },
-  ];
+  
 
   const moneyPyramid = useMemo(
     () =>
@@ -117,14 +49,13 @@ function App() {
               <div className="timer">
                 <Timer
                   setStop={setStop}
-                  questionNumber={questionNumber}
-                  // setQuestionNumber={setQuestionNumber}
+                  questionNumber={questionNumber} 
                 />
               </div>
             </div>
             <div className="bottom">
               <Trivia
-                data={data}
+                questions={questions}
                 setStop={setStop}
                 questionNumber={questionNumber}
                 setQuestionNumber={setQuestionNumber}

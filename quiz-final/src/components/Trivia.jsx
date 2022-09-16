@@ -4,7 +4,7 @@ import play from "../assets/play.wav";
 import correct from "../assets/correct.mp3";
 import wrong from "../assets/wrong.mp3";
 export default function Trivia({
-  data,
+  questions,
   setStop,
   questionNumber,
   setQuestionNumber,
@@ -21,8 +21,8 @@ export default function Trivia({
   }, [letsPlay]);
 
   useEffect(() => {
-    setQuestion(data[questionNumber - 1]);
-  }, [data, questionNumber]);
+    setQuestion(questions[questionNumber - 1]);
+  }, [questions, questionNumber]);
 
   const delay = (duration, callback) => {
     setTimeout(() => {
