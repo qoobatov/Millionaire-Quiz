@@ -10,66 +10,69 @@ function App() {
   const data = [
     {
       id: 1,
-      question: "Как звали крокодила?",
+      question:
+        "Какому условию должна удовлетворять длина волны света λ, падающего на поверхность металла, чтобы началось явление фотоэффекта?",
       answers: [
         {
-          text: "dsfdsfsdfds",
+          text: "λ ≥ A/h",
           correct: false,
         },
         {
-          text: "Gena",
+          text: "λ ≤ hc/A",
           correct: true,
         },
         {
-          text: "dsfdsfsdfds",
+          text: "λ > Ek/h",
           correct: false,
         },
         {
-          text: "dsfdsfsdfds",
+          text: "λ > hc/A",
           correct: false,
         },
       ],
     },
     {
       id: 2,
-      question: "Как звали Осла?",
+      question:
+        "Лазер полезной мощностью 30 Вт испускает каждую секунду 1020 фотонов. Определите длину волны излучения лазера (мкм). h = 6,6•10-34Дж•с?",
       answers: [
         {
-          text: "dsfdsfsdfds",
-          correct: false,
-        },
-        {
-          text: "ИА",
+          text: "0,66",
           correct: true,
         },
         {
-          text: "dsfdsfsdfds",
+          text: "0,99",
           correct: false,
         },
         {
-          text: "dsfdsfsdfds",
+          text: "1,98",
+          correct: false,
+        },
+        {
+          text: "0.78",
           correct: false,
         },
       ],
     },
     {
       id: 3,
-      question: "Как звали поросенка?",
+      question:
+        "Сколько фотонов каждую секунду испускает источник монохроматического света с длиной волны 660 нм и мощностью 20 Вт? h = 6,6•10-34Дж•с",
       answers: [
         {
-          text: "dsfdsfsdfds",
+          text: "10**20",
           correct: false,
         },
         {
-          text: "Пятачок",
+          text: "5•10**20",
+          correct: false,
+        },
+        {
+          text: "6,7•10**19",
           correct: true,
         },
         {
-          text: "dsfdsfsdfds",
-          correct: false,
-        },
-        {
-          text: "dsfdsfsdfds",
+          text: "6,7•10**21",
           correct: false,
         },
       ],
